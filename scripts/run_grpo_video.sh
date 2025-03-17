@@ -1,8 +1,6 @@
 
 export WANDB_PROJECT=Video-GRPO
-export WANDB_NAME=Qwen2.5_7b_TG_Activieynet
-
-# mkdir -p /outputs/$WANDB_PROJECT/$WANDB_NAME
+export WANDB_NAME=Qwen2.5_7b_TG
 
 export PYTHONPATH=".:$PYTHONPATH"
 OUTDIR=outputs_video
@@ -10,7 +8,6 @@ OUTDIR=outputs_video
 export DEBUG_MODE="true"
 export LOG_PATH="./qwen2.5_7b_vl_tg_video.txt"
 
-# --report_to wandb \
 torchrun --nproc_per_node="4" \
     --nnodes="1" \
     --node_rank="0" \
@@ -19,11 +16,11 @@ torchrun --nproc_per_node="4" \
     src/open_r1/grpo_video.py \
     --deepspeed scripts/zero3_offload.json \
     --output_dir $OUTDIR \
-    --model_name_or_path /share/wy/Video/R1-Video-Stable/open-r1-multimodal/Qwen2.5-VL_outputs_video_slid_flash_attention_2_activitynet_continue/checkpoint-200 \
-    --preprocessed_data_path /share/wy/Video/R1-Video-Stable/open-r1-multimodal/activitynet_preprocessed_data_maxpix_3584 \
-    --train_data_path /share/wy/Video/Video_Grounding/annotations/train.json \
-    --eval_data_path /share/wy/Video/Video_Grounding/annotations/val_2.json \
-    --video_folder /share/zsp/datasets/motion_raw/v2/activitynet/images \
+    --model_name_or_path /share/pretrain/mllm/Qwen2.5-VL-7B-Instruct \
+    --preprocessed_data_path ./Charades_preprocessed_data_maxpix_3584 \
+    --train_data_path ./Charades/charades_annotation/train.json \
+    --eval_data_path ./Charades/charades_annotation/val.json \
+    --video_folder ./Charades/Charades_v1 \
     --dataset_name xxx \
     --max_prompt_length 8192 \
     --max_completion_length 1024 \
