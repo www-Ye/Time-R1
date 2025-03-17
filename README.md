@@ -9,7 +9,7 @@
 
 ### Overview
 
-TimeZero is a reasoning-guided Large Vision-Language Model (LVLM) designed for Temporal Video Grounding (TVG). It excels at identifying specific segments within lengthy videos that correspond to a given natural language query.  TimeZero achieves this entirely through a reinforcement learning approach that allows the model to reason about video-language relationships *during inference*.
+TimeZero is a reasoning-guided Large Vision-Language Model (LVLM) for Temporal Video Grounding (TVG). It excels at identifying temporal segments within videos that correspond to a given natural language query.  TimeZero achieves this entirely through a reinforcement learning approach that allows the model to reason about video-language relationships *during inference*.
 
 Key Features:
 
@@ -29,11 +29,11 @@ This README provides an overview of TimeZero, including setup instructions, the 
 
 ![0a466a4bca3bb8d9b2a2af0f15890b4](https://github.com/user-attachments/assets/df1c35f5-8c30-400b-bce6-14e1f766752c)
 
-
 ## Setup
 
 ```bash
 conda create -n timezero python=3.11
+conda env create -f environment.yml
 conda activate timezero
 ```
 
@@ -60,10 +60,10 @@ TimeZero training involves the following steps:
 
     ```bash
     #!/bin/bash
-
+    
     export DEBUG_MODE="false"  # Set to "true" for verbose logging during training.
     export LOG_PATH="./debug_log.txt"
-
+    
     torchrun --nproc_per_node="8" \
         --nnodes="1" \
         --node_rank="0" \
@@ -108,26 +108,40 @@ python ../evaluate.py --model_path <path_to_your_trained_model> --dataset_path <
 
 ## Results
 
-**Charades-STA (Finetuned)**
+-   **Charades-STA (Finetuned)**
 
-![image]
+TimeZero outperforms previous state-of-the-art methods by a large margin. 
 
-**ActivityNet**
+| Method                | Type | R1@0.3 | R1@0.5 | R1@0.7 |
+| --------------------- | ---- | ------ | ------ | ------ |
+| EaTR (VLP sota)       | VLP  | -      | 68.4   | 44.9   |
+| TimeSuite (LVLM sota) | SFT  | 79.4   | 67.1   | 43.0   |
+| TimeZero (ours)       | RL   | 83.3   | 72.5   | 47.9   |
 
-![image]
+-   **ActivityNet (Finetuned)**
+
+TimeZero surpasses previous state-of-the-art LVLMs. 
+
+| Method                | Type | R1@0.3 | R1@0.5 | R1@0.7 |
+| --------------------- | ---- | ------ | ------ | ------ |
+| EaTR (VLP sota)       | VLP  | -      | 58.18  | 37.64  |
+| TimeSuite (LVLM sota) | SFT  | 54.0   | 37.7   | 24.0   |
+| TimeZero (ours)       | RL   | 68.6   | 47.3   | 26.9   |
 
 ## Acknowledgements
 
 We thank the authors of the following projects for their contributions:
 
-*   [TRACE]
-*    R1-V
-*   Qwen2.5-VL
+*   [TRACE](https://github.com/gyxxyg/TRACE)
+*    [R1-V](https://github.com/Deep-Agent/R1-V)
+*   [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL)
 
 ## Citation
 
+paper coming soon
+
 ```bibtex
-@inproceedings{wang2025timezero,
+@article{wang2025timezero,
   title={TimeZero: Temporal Video Grounding with Reasoning-Guided LVLM},
   author={Wang, Ye and Xu, Boshen and Yue, Zihao and Xiao, Zihan and Wang, Ziheng and Zhang, Liang and Yang, Dingyi and Wang, Wenxuan and Jin, Qin},
   booktitle={arxiv},
