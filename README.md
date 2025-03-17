@@ -1,5 +1,12 @@
 # TimeZero: Temporal Video Grounding with Reasoning-Guided LVLM
 
+paper coming soon!
+
+<div style='display:flex; gap: 0.25rem; '>
+<a href='None'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
+<a href='None'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> 
+</div>
+
 ---
 
 ### Updates
@@ -43,7 +50,7 @@ TimeZero training involves the following steps:
 
 1.  **Data Preprocessing:**
 
-    Download the dataset [Charades-STA]([jiyanggao/TALL: TALL: Temporal Activity Localization via Language Query](https://github.com/jiyanggao/TALL#charades-sta-anno-download)), [ActivityNet](https://cs.stanford.edu/people/ranjaykrishna/densevid/)
+    Download the dataset [Charades-STA](https://github.com/jiyanggao/TALL#charades-sta-anno-download), [ActivityNet](https://cs.stanford.edu/people/ranjaykrishna/densevid/)
 
     Before training, you need to preprocess the video data.
 
@@ -141,7 +148,6 @@ We thank the authors of the following projects for their contributions:
 
 ## Citation
 
-paper coming soon
 
 ```bibtex
 @article{wang2025timezero,
