@@ -1,18 +1,10 @@
 # TimeZero: Temporal Video Grounding with Reasoning-Guided LVLM
 
-<<<<<<< HEAD
+
 <div style='display:flex; gap: 0.25rem; '>
 <a href='./TimeZero_TechReport.pdf'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
-=======
-paper coming soon!
-
-<!-- <div style='display:flex; gap: 0.25rem; '>
-<a href='None'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
->>>>>>> bbb062e6c22e12dd3b49918f739068bdabe24cb6
 <a href='None'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> 
-</div> -->
-
----
+</div>
 
 ### Updates
 
