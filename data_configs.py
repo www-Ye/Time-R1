@@ -1,6 +1,6 @@
 DATASETS={
     'charades': {
-        'video_path': '/share/wy/Video/Charades/Charades_v1',
+        'video_path': './Charades/Charades_v1',
         'stride': 20,
         'max_stride_factor': 0.5,
         'splits': {
@@ -35,7 +35,7 @@ DATASETS={
         }
     },
     'activitynet': {
-        'video_path': '/share/zsp/datasets/motion_raw/v2/activitynet/images',
+        'video_path': './activitynet/videos',
         'stride': 40,
         'max_stride_factor': 1,
         'splits': {
