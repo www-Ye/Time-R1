@@ -4,4 +4,5 @@ MODEL_BASE=./outputs_video
 
 python evaluate.py \
      --model_base $MODEL_BASE \
-     --dataset charades
+     --dataset charades \
+     --checkpoint_dir ckpt_charades
