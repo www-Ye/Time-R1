@@ -66,7 +66,7 @@ TimeZero training involves the following steps:
     bash run_grpo_video.sh
     ```
 
-    **`run_grpo_video.sh` (Create this file - Example Content)**
+    **`run_grpo_video.sh`**
 
     ```bash
     #!/bin/bash
