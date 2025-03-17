@@ -42,6 +42,9 @@ conda activate timezero
 TimeZero training involves the following steps:
 
 1.  **Data Preprocessing:**
+
+    Download the dataset [Charades-STA]([jiyanggao/TALL: TALL: Temporal Activity Localization via Language Query](https://github.com/jiyanggao/TALL#charades-sta-anno-download)), [ActivityNet](https://cs.stanford.edu/people/ranjaykrishna/densevid/)
+
     Before training, you need to preprocess the video data.
 
     ```bash
@@ -122,11 +125,11 @@ TimeZero outperforms previous state-of-the-art methods by a large margin.
 
 TimeZero surpasses previous state-of-the-art LVLMs. 
 
-| Method                | Type | R1@0.3 | R1@0.5 | R1@0.7 |
-| --------------------- | ---- | ------ | ------ | ------ |
-| EaTR (VLP sota)       | VLP  | -      | 58.18  | 37.64  |
-| TimeSuite (LVLM sota) | SFT  | 54.0   | 37.7   | 24.0   |
-| TimeZero (ours)       | RL   | 68.6   | 47.3   | 26.9   |
+| Method            | Type | R1@0.3 | R1@0.5 | R1@0.7 |
+| ----------------- | ---- | ------ | ------ | ------ |
+| EaTR (VLP sota)   | VLP  | -      | 58.18  | 37.64  |
+| TRACE (LVLM sota) | SFT  | 54.0   | 37.7   | 24.0   |
+| TimeZero (ours)   | RL   | 68.6   | 47.3   | 26.9   |
 
 ## Acknowledgements
 
