@@ -11,8 +11,8 @@ paper coming soon!
 
 ### Updates
 
-- 2025-03-16: TimeZero initial release! Code and evaluation scripts are now available.
-- 2025-03-16: TimeZero achieves SOTA performance on Charades-STA!
+- 2025-03-17: TimeZero initial release! Code and evaluation scripts are now available.
+- 2025-03-17: TimeZero achieves SOTA performance on Charades-STA!
 
 ### Overview
 
@@ -55,9 +55,9 @@ TimeZero training involves the following steps:
     Before training, you need to preprocess the video data.
 
     ```bash
-    python pre_process_video.py
+    bash preprocess_video.sh
     ```
-    Specify the path to the Charades-STA dataset (video files, annotations, etc.).  See the `dataset/` directory for an example structure you should follow.
+    Specify the path to the Charades-STA dataset (video files, annotations, etc.).
 
 2.  **GRPO Training:**
 
@@ -74,47 +74,51 @@ TimeZero training involves the following steps:
     export DEBUG_MODE="false"  # Set to "true" for verbose logging during training.
     export LOG_PATH="./debug_log.txt"
     
-    torchrun --nproc_per_node="8" \
-        --nnodes="1" \
-        --node_rank="0" \
-        --master_addr="127.0.0.1" \
-        --master_port="12345" \
-        ../src/open_r1/grpo.py \  # Adjust this path if your GRPO script is located elsewhere
-        --output_dir <OUTPUT_DIR> \
-        --model_name_or_path <PATH-TO-YOUR-BASE-MODEL> \  # e.g., Qwen2-VL-Instruct
-        --dataset_name charades_sta \ # Use your dataset name within data_configs.
-        --deepspeed zero3_offload.json \ # Path to the deepspeed config file.
-        --max_prompt_length 512 \
-        --max_completion_length 64 \ # Adjust as needed.
-        --per_device_train_batch_size 1 \
-        --gradient_accumulation_steps 2 \
-        --logging_steps 1 \
-        --bf16 \
-        --report_to wandb \
-        --gradient_checkpointing false \
-        --attn_implementation flash_attention_2 \  # If supported by your base model
-        --num_train_epochs 2 \
-        --run_name TimeZero-Charades-STA \
-        --save_steps 100 \
-        --save_only_model true \
-        --num_generations 8   # Number of outputs to generate during RL.  Reduce for faster training/less memory.
+    torchrun --nproc_per_node="4" \
+    --nnodes="1" \
+    --node_rank="0" \
+    --master_addr="127.0.0.1" \
+    --master_port="12361" \
+    src/open_r1/grpo_video.py \
+    --deepspeed scripts/zero3_offload.json \
+    --output_dir $OUTDIR \
+    --model_name_or_path mllm/Qwen2.5-VL-7B-Instruct \
+    --preprocessed_data_path ./Charades_preprocessed_data_maxpix_3584 \
+    --train_data_path ./Charades/charades_annotation/train.json \
+    --eval_data_path ./Charades/charades_annotation/val.json \
+    --video_folder ./Charades/Charades_v1 \
+    --dataset_name xxx \
+    --max_prompt_length 8192 \
+    --max_completion_length 1024 \
+    --num_generations 8 \
+    --per_device_train_batch_size 1 \
+    --gradient_accumulation_steps 2 \
+    --logging_steps 1 \
+    --bf16 \
+    --torch_dtype bfloat16 \
+    --data_seed 42 \
+    --gradient_checkpointing true \
+    --attn_implementation flash_attention_2 \
+    --num_train_epochs 2 \
+    --run_name $WANDB_NAME \
+    --report_to wandb \
+    --save_steps 50 \
+    --save_only_model true
     ```
-> [!NOTE]
 
 ## Evaluation
 
 After training, evaluate your model's performance:
 
 ```bash
-cd scripts
-bash evaluate.sh # Use evaluate.sh for evaluation.
+bash scripts/evaluate.sh # Use evaluate.sh for evaluation.
 ```
 **`evaluate.sh`**
 ```
-python ../evaluate.py --model_path <path_to_your_trained_model> --dataset_path <path_to_charades_sta_test_data>
+python evaluate.py --model_base <path_to_your_trained_model> --dataset <charades or activitynet>
 ```
 
-> [!NOTE] The evaluation script (`evaluate.py`) needs to be implemented to load your model, process the test data, and calculate the relevant metrics (R1@0.3, R1@0.5, R1@0.7, etc.).
+> The evaluation script (`evaluate.py`) needs to be implemented to load your model, process the test data, and calculate the relevant metrics (R1@0.3, R1@0.5, R1@0.7, etc.).
 
 ## Results
 
