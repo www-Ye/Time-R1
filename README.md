@@ -3,7 +3,7 @@
 
 <div style='display:flex; gap: 0.25rem; '>
 <a href='./TimeZero_TechReport.pdf'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
-<a href='None'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> 
+<a href='https://huggingface.co/wwwyyy/TimeZero-Charades-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> 
 </div>
 
 ### Updates
