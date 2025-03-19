@@ -33,7 +33,7 @@ torchrun --nproc_per_node="4" \
     --data_seed 42 \
     --gradient_checkpointing true \
     --attn_implementation flash_attention_2 \
-    --num_train_epochs 1 \
+    --num_train_epochs 2 \
     --run_name $WANDB_NAME \
     --report_to wandb \
     --save_steps 50 \
