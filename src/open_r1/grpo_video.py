@@ -43,7 +43,7 @@ class GRPOScriptArguments(ScriptArguments):
     """
 
     reward_funcs: list[str] = field(
-        default_factory=lambda: ["iou"],
+        default_factory=lambda: ["iou", "format"],
         metadata={"help": "List of reward functions. Possible values: 'iou', 'format'"},
     )
     max_pixels: Optional[int] = field(
