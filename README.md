@@ -1,9 +1,9 @@
 # TimeZero: Temporal Video Grounding with Reasoning-Guided LVLM
 
-
 <div style='display:flex; gap: 0.25rem; '>
-<a href='./TimeZero_TechReport.pdf'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
-<a href='https://huggingface.co/wwwyyy/TimeZero-Charades-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> 
+  <a href='./TimeZero_TechReport.pdf'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
+  <a href='https://huggingface.co/wwwyyy/TimeZero-Charades-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Charades-blue'></a>
+  <a href='https://huggingface.co/wwwyyy/TimeZero-ActivityNet-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-ActivityNet-blue'></a>
 </div>
 
 ### Updates
