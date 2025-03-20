@@ -47,7 +47,7 @@ TimeZero training involves the following steps:
 
 1.  **Data Preprocessing:**
 
-    Download the dataset [Charades-STA](https://github.com/jiyanggao/TALL#charades-sta-anno-download), [ActivityNet](https://cs.stanford.edu/people/ranjaykrishna/densevid/)
+    Download the dataset [Charades-STA](https://github.com/jiyanggao/TALL#charades-sta-anno-download), [Charades-v1](https://huggingface.co/datasets/HuggingFaceM4/charades), [ActivityNet](https://cs.stanford.edu/people/ranjaykrishna/densevid/)
 
     Before training, you need to preprocess the video data.
 
@@ -56,7 +56,7 @@ TimeZero training involves the following steps:
     ```
     Specify the path to the Charades-STA dataset (video files, annotations, etc.).
 
-2.  **GRPO Training:**
+3.  **GRPO Training:**
 
     ```bash
     cd scripts
