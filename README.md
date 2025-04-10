@@ -1,11 +1,10 @@
 # TimeZero: Temporal Video Grounding with Reasoning-Guided LVLM
 
 <div style='display:flex; gap: 0.25rem; '>
-  <a href='./TimeZero_TechReport.pdf'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
+  <a href='https://arxiv.org/abs/2503.13377'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
   <a href='https://huggingface.co/wwwyyy/TimeZero-Charades-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Charades-blue'></a>
   <a href='https://huggingface.co/wwwyyy/TimeZero-ActivityNet-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-ActivityNet-blue'></a>
 </div>
-
 ### Updates
 
 - 2025-03-17: TimeZero initial release! Code and evaluation scripts are now available.
@@ -154,7 +153,7 @@ We thank the authors of the following projects for their contributions:
 @article{wang2025timezero,
   title={TimeZero: Temporal Video Grounding with Reasoning-Guided LVLM},
   author={Wang, Ye and Xu, Boshen and Yue, Zihao and Xiao, Zihan and Wang, Ziheng and Zhang, Liang and Yang, Dingyi and Wang, Wenxuan and Jin, Qin},
-  booktitle={arxiv},
+  journal={arXiv preprint arXiv:2503.13377},
   year={2025}
 }
 ```
