@@ -5,6 +5,7 @@
   <a href='https://huggingface.co/wwwyyy/TimeZero-Charades-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Charades-blue'></a>
   <a href='https://huggingface.co/wwwyyy/TimeZero-ActivityNet-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-ActivityNet-blue'></a>
 </div>
+
 ### Updates
 
 - 2025-03-17: TimeZero initial release! Code and evaluation scripts are now available.
