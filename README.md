@@ -1,4 +1,4 @@
-# TimeZero: Temporal Video Grounding with Reasoning-Guided LVLM
+# Time-R1: Post-Training Large Vision Language Model for Temporal Video Grounding
 
 <div style='display:flex; gap: 0.25rem; '>
   <a href='https://arxiv.org/abs/2503.13377'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
@@ -8,6 +8,7 @@
 
 ### Updates
 
+- 2025-05-27: Expanded Time-R1 ArXiv paper released! Read on [ArXiv](https://arxiv.org/abs/2503.13377).
 - 2025-03-17: TimeZero initial release! Code and evaluation scripts are now available.
 - 2025-03-17: TimeZero achieves SOTA performance on Charades-STA!
 
