@@ -152,9 +152,9 @@ We thank the authors of the following projects for their contributions:
 
 
 ```bibtex
-@article{wang2025timezero,
-  title={TimeZero: Temporal Video Grounding with Reasoning-Guided LVLM},
-  author={Wang, Ye and Xu, Boshen and Yue, Zihao and Xiao, Zihan and Wang, Ziheng and Zhang, Liang and Yang, Dingyi and Wang, Wenxuan and Jin, Qin},
+@article{wang2025timer1posttraininglargevision,
+  title={Time-R1: Post-Training Large Vision Language Model for Temporal Video Grounding},
+  author={Ye Wang and Ziheng Wang and Boshen Xu and Yang Du and Kejun Lin and Zihan Xiao and Zihao Yue and Jianzhong Ju and Liang Zhang and Dingyi Yang and Xiangnan Fang and Zewen He and Zhenbo Luo and Wenxuan Wang and Junqi Lin and Jian Luan and Qin Jin},
   journal={arXiv preprint arXiv:2503.13377},
   year={2025}
 }
