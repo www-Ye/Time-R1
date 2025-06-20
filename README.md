@@ -19,7 +19,7 @@ Note: TimeZero is the original version
 
 ### Updates
 
-- 2025-06-20: <span style="color:yellow"><strong>The code for Time-R1 is now open-sourced at [https://github.com/xiaomi-research/time-r1](https://github.com/xiaomi-research/time-r1)! It supports training and testing on Charades, ActivityNet, and TimeRFT, along with vLLM-accelerated inference for Charades, ActivityNet, TVGBench, VideoMME, MVBench, TempCompass, and EgoSchema.</strong></span>
+- 🚀2025-06-20: <span style="color:yellow"><strong>The code for Time-R1 is now open-sourced at <a href="https://github.com/xiaomi-research/time-r1">https://github.com/xiaomi-research/time-r1</a>!</strong></span> It supports training and testing on Charades, ActivityNet, and TimeRFT, along with vLLM-accelerated inference for Charades, ActivityNet, TVGBench, VideoMME, MVBench, TempCompass, and EgoSchema.
 - 2025-05-27: Expanded Time-R1 ArXiv paper released! Read on [ArXiv](https://arxiv.org/abs/2503.13377).
 - 2025-03-17: TimeZero initial release! Code and evaluation scripts are now available.
 - 2025-03-17: TimeZero achieves SOTA performance on Charades-STA!
