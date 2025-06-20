@@ -6,8 +6,20 @@
   <a href='https://huggingface.co/wwwyyy/TimeZero-ActivityNet-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-ActivityNet-blue'></a>
 </div>
 
+
+
+Note: TimeZero is the original version
+> [**Time-R1: Post-Training Large Vision Language Model for Temporal Video Grounding**](https://arxiv.org/abs/2503.13377v2) <br>
+> Ye Wang*, Ziheng Wang*, Boshen Xu*‡, Yang Du, Kejun Lin, Zihan Xiao, Zihao Yue, Jianzhong Ju, Liang Zhang, Dingyi Yang, Xiangnan Fang, Zewen He, Zhenbo Luo, Wenxuan Wang, Junqi Lin, Jian Luan, Qin Jin† <br>
+[![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/xiaomi-research/Time-R1) [![github](https://img.shields.io/github/stars/xiaomi-research/Time-R1.svg?style=social)](https://github.com/xiaomi-research/Time-R1)[![arXiv](https://img.shields.io/badge/Arxiv-2503.13377v2-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2503.13377v2) <br>
+> [**TimeZero: Temporal Video Grounding with Reasoning-Guided LVLM**](https://arxiv.org/abs/2503.13377v1) <br>
+> Ye Wang*, Boshen Xu*, Zihao Yue, Zihan Xiao, Ziheng Wang, Liang Zhang, Dingyi Yang, Wenxuan Wang, Qin Jin† <br>
+[![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/www-Ye/Time-R1) [![github](https://img.shields.io/github/stars/www-Ye/Time-R1.svg?style=social)](https://github.com/www-Ye/Time-R1)[![arXiv](https://img.shields.io/badge/Arxiv-2503.13377v1-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2503.13377v1) <br>
+    
+
 ### Updates
 
+- 2025-06-20: <span style="color:yellow"><strong>The code for Time-R1 is now open-sourced at [https://github.com/xiaomi-research/time-r1](https://github.com/xiaomi-research/time-r1)! It supports training and testing on Charades, ActivityNet, and TimeRFT, along with vLLM-accelerated inference for Charades, ActivityNet, TVGBench, VideoMME, MVBench, TempCompass, and EgoSchema.</strong></span>
 - 2025-05-27: Expanded Time-R1 ArXiv paper released! Read on [ArXiv](https://arxiv.org/abs/2503.13377).
 - 2025-03-17: TimeZero initial release! Code and evaluation scripts are now available.
 - 2025-03-17: TimeZero achieves SOTA performance on Charades-STA!
@@ -151,11 +163,23 @@ We thank the authors of the following projects for their contributions:
 ## Citation
 
 
+If you find our work useful, please consider cite our paper :).
+
+
 ```bibtex
-@article{wang2025timer1posttraininglargevision,
-  title={Time-R1: Post-Training Large Vision Language Model for Temporal Video Grounding},
-  author={Ye Wang and Ziheng Wang and Boshen Xu and Yang Du and Kejun Lin and Zihan Xiao and Zihao Yue and Jianzhong Ju and Liang Zhang and Dingyi Yang and Xiangnan Fang and Zewen He and Zhenbo Luo and Wenxuan Wang and Junqi Lin and Jian Luan and Qin Jin},
-  journal={arXiv preprint arXiv:2503.13377},
-  year={2025}
+@article{wang2025timer1,
+      title={Time-R1: Post-Training Large Vision Language Model for Temporal Video Grounding}, 
+      author={Wang, Ye and Wang, Ziheng and Xu, Boshen and Du, Yang and Lin, Kejun and Xiao, Zihan and Yue, Zihao and Ju, Jianzhong and Zhang, Liang and Yang, Dingyi and Fang, Xiangnan and He, Zewen and Luo, Zhenbo and Wang, Wenxuan and Lin, Junqi and Luan, Jian and Jin, Qin},
+      journal={arXiv preprint arXiv:2503.13377},
+      year={2025},
+}
+```
+
+```bibtex
+@article{wang2025timezero,
+      title={TimeZero: Temporal Video Grounding with Reasoning-Guided LVLM},
+      author={Wang, Ye and Xu, Boshen and Yue, Zihao and Xiao, Zihan and Wang, Ziheng and Zhang, Liang and Yang, Dingyi and Wang, Wenxuan and Jin, Qin},
+      journal={arXiv preprint arXiv:2503.13377},
+      year={2025}
 }
 ```
